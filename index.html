@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html ng-app='app'>
 <head>
-    <title>Angular Todo Chrome Extension</title>
-    <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <title>Angular Todo Chrome Extension</title>
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body ng-controller='HeadsUpCtrl'>
-    Heads up!
+  <h1>Heads up!</h1>
+  <div ng-repeat='movie in movies'>
+    {{movie}}
+  </div>
+  <button></button>
 </div>
 <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
 <script type="text/javascript" src="node_modules/angular/angular.min.js"></script>
+<script type="text/javascript" src="app/moviesData.js"></script>
 <script type="text/javascript" src="app/app.js"></script>
 <script type="text/javascript" src="app/headsUpCtrl.js"></script>
+<script type="text/javascript" src="app/movieDataService.js"></script>
 </body>
 </html>

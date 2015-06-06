@@ -1,29 +1,16 @@
-angular.module('app').controller('headsUpCtrl', function ($scope) {
+angular.module('app').controller('HeadsUpCtrl', ['$scope', 'MovieDataService', function ($scope, MovieDataService) {
+  $scope.movies = [];
 
-    // $scope.$watch('todoStorage.data', function() {
-    //     $scope.todoList = $scope.todoStorage.data;
-    // });
+  findAll();
 
-    // $scope.todoStorage.findAll(function(data){
-    //     $scope.todoList = data;
-    //     $scope.$apply();
-    // });
+  function findAll(){
+    chrome.storage.sync.get('movies', function(data) {
+      data.movies.forEach(function(movie){
+        $scope.movies.push(movie.title);
+      })
+      $scope.$apply();
+    });
+  }
 
-    // $scope.add = function() {
-    //     todoStorage.add($scope.newContent);
-    //     $scope.newContent = '';
-    // }
 
-    // $scope.remove = function(todo) {
-    //     todoStorage.remove(todo);
-    // }
-
-    // $scope.removeAll = function() {
-    //     todoStorage.removeAll();
-    // }
-
-    // $scope.toggleCompleted = function() {
-    //     todoStorage.sync();
-    // }
-
-});
+}]);

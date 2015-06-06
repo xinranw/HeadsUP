@@ -1,0 +1,20 @@
+  {
+    "movies": [
+    {
+      "name": "Fifty Shades of Grey",
+      "release-date": "2015-02-09T00:00:00-0000"
+    },  
+    {
+      "name": "Jurassic World",
+      "release-date": "2015-05-29T00:00:00-0000"
+    },
+    {
+      "name": "Furious 7",
+      "release-date": "2015-03-26T00:00:00-0000"
+    },
+    {
+      "name": "Minions",
+      "release-date": "2015-07-10T00:00:00-0000"
+    }
+  ]
+  }
