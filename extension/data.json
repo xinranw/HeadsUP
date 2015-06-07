@@ -1,0 +1,44 @@
+  {
+    "movies": [
+    {
+      "name": "Fifty Shades of Grey",
+      "description": "Don't forget to watch!",
+      "releaseDate": "2015-02-09T00:00:00-0000"
+    },  
+    {
+      "name": "Jurassic World",
+      "description": "Don't forget to watch!",
+      "releaseDate": "2015-05-07T00:00:00-0000"
+    },
+    {
+      "name": "Furious 7",
+      "description": "Don't forget to watch!",
+      "releaseDate": "2015-09-26T00:00:00-0000"
+    },
+    {
+      "name": "Minions",
+      "description": "Don't forget to watch!",
+      "releaseDate": "2015-10-10T00:00:00-0000"
+    },
+    {
+      "name": "Pitch Perfect 2",
+      "description": "Don't forget to watch!",
+      "releaseDate": "2015-03-10T00:00:00-0000"
+    },
+    {
+      "name": "Ted 2",
+      "description": "Don't forget to watch!",
+      "releaseDate": "2015-04-10T00:00:00-0000"
+    },
+    {
+      "name": "Zombeavers",
+      "description": "Don't forget to watch!",
+      "releaseDate": "2015-06-15T00:00:00-0000"
+    },
+    {
+      "name": "Northern Soul",
+      "description": "Don't forget to watch!",
+      "releaseDate": "2015-06-19T00:00:00-0000"
+    }
+  ]
+  }

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html ng-app='app'>
+<head>
+  <title>Angular Todo Chrome Extension</title>
+  <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+  <script type="text/javascript" src="node_modules/bootstrap/dist/css/bootstrap.min.css"></script>
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body ng-controller='HeadsUpCtrl' class='hu-popup'>
+  <div class='hu-header-container'>
+    <h4 class='hu-header'>Heads up!</h4>
+  </div>
+  <div class="hu-social-container">
+    <div class="hu-facebook-container">
+      <!-- <img src="/images/facebook.png" class="hu-facebook"/> -->
+    </div>
+    <div class="hu-title">
+      Facebook
+    </div>
+    <div class="switch">
+      <input id="cmn-toggle-1" class="cmn-toggle cmn-toggle-round" type="checkbox">
+      <label for="cmn-toggle-1"></label>
+    </div>
+  </div>
+  <div class="hu-contacts-container">
+    <div class="hu-title">
+      SMS number
+    </div>
+    <div ng-show="number.show" class="hu-text">
+      {{number.value}}
+    </div>
+    <form name="contactForm" ng-hide="number.show"> 
+      <input type="tel" ng-model="number.value" class="hu-number-input" placeholder='07723 510545'>
+      <a class="hu-number-button hu-button" ng-click="setupNumber(number.value)">Save</a>
+    </form>
+  </div>
+  <section class='hu-movies-container'>
+    <div class="hu-title">Coming up</div>
+    <div class='hu-text'>
+      <div ng-repeat='movie in movies'>
+        {{movie.title}}
+      </div>
+    </div>
+  </section>
+  <div class="hu-notification-button-container">
+    <a class="hu-notification-button hu-button" ng-click="checkForNewNotifications()">Notify me!</a>
+  </div>
+</div>
+<script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="node_modules/angular/angular.min.js"></script>
+<script type="text/javascript" src="app/moviesData.js"></script>
+<script type="text/javascript" src="app/app.js"></script>
+<script type="text/javascript" src="app/headsUpCtrl.js"></script>
+<script type="text/javascript" src="app/movieDataService.js"></script>
+</body>
+</html>

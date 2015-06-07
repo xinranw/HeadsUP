@@ -1,19 +1,19 @@
 {
   "manifest_version": 2,
 
-  "name": "HeadsUpFuckOff",
+  "name": "HeadsUp!",
   "description": "Movie reminders",
   "version": "1.0",
 
   "browser_action": {
-    "default_icon": "images/icon.png",
+    "default_icon": "images/humphrey.png",
     "default_popup": "index.html"
   },
   "content_scripts": [
   {
     "matches": [
-    "http://*/*",
-    "https://*/*"
+    "http://www.youtube.com/*",
+    "https://www.youtube.com/*"
     ],
     "css": [
     "node_modules/bootstrap/dist/css/bootstrap.min.css",
@@ -33,7 +33,8 @@
   ],
   "web_accessible_resources": [
     "data.json",
-    "moviesData.js"
+    "moviesData.js",
+    "images/*"
   ],
   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
 }
